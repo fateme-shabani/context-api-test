@@ -12,10 +12,10 @@ const Products = () => {
     // ])
   return (
     <div>
-        {products.map(item=>{return <Card product={item} />})}
+        {products.map(item=>{return <Card key={item.id} product={item} />})}
 
     </div>
   )
 }
 
-export default Products
+export default Products  

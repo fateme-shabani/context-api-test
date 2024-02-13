@@ -6,6 +6,7 @@ import A3 from "./components/A3";
 import A4 from "./components/A4";
 import Products from "./components/Products";
 import Header from "./components/Header";
+import Form from "./components/Form";
 import { MyProvider } from "./myContext/context";
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
       <MyProvider>
         <Header />
         <Products />
+        <Form />
       </MyProvider>
     </>
   );
