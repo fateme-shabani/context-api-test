@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./App.css";
 import A1 from "./components/A1";
 import A2 from "./components/A2";
@@ -11,6 +11,18 @@ import { MyProvider } from "./myContext/context";
 
 function App() {
   const [count, setCount] = useState(0);
+  useEffect(() => {
+    fetch("https://jsonplaceholder.typicode.com/posts")
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+        console.log(data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, []);
 
   return (
     <>
